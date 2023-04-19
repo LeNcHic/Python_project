@@ -8,7 +8,7 @@ class Graph:
         self.graph.append([u, v, w])
 
     # check is there a negative cycle in graph
-    def is_negative_cycle(self, src):
+    def has_negative_cycle(self, src):
         dist = [float("Inf")] * self.V
         dist[src] = 0
 
@@ -25,7 +25,7 @@ class Graph:
         return False
 
     # find negative cycle in the graph
-    def negative_cycle(self, src):
+    def find_negative_cycle(self, src):
         dist = [float("Inf")] * self.V
         arr = [-1] * self.V
         dist[src] = 0

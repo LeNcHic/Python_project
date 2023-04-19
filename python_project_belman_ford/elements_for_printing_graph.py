@@ -16,6 +16,39 @@ edges = [
         ("BYN", "CNY"),
     ]
 
+edge_to_numb = {
+        ("GBP", "EUR"): 9,
+        ("EUR", "GBP"): 9,
+        ("GBP", "USD"): 5,
+        ("USD", "GBP"): 5,
+        ("GBP", "RUB"): 0,
+        ("RUB", "GBP"): 0,
+        ("GBP", "BYN"): 12,
+        ("BYN", "GBP"): 12,
+        ("GBP", "CNY"): 13,
+        ("CNY", "GBP"): 13,
+        ("EUR", "USD"): 6,
+        ("USD", "EUR"): 6,
+        ("EUR", "RUB"): 1,
+        ("RUB", "EUR"): 1,
+        ("EUR", "BYN"): 10,
+        ("BYN", "EUR"): 10,
+        ("EUR", "CNY"): 11,
+        ("CNY", "EUR"): 11,
+        ("USD", "RUB"): 2,
+        ("RUB", "USD"): 2,
+        ("USD", "BYN"): 7,
+        ("BYN", "USD"): 7,
+        ("USD", "CNY"): 8,
+        ("CNY", "USD"): 8,
+        ("RUB", "BYN"): 3,
+        ("BYN", "RUB"): 3,
+        ("RUB", "CNY"): 4,
+        ("CNY", "RUB"): 4,
+        ("BYN", "CNY"): 14,
+        ("CNY", "BYN"): 14,
+}
+
 
 def get_edge_labels(rates, currencies_to_numb):
     edge_labels = {

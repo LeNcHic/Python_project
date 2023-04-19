@@ -4,7 +4,7 @@ import interface
 import connection_number_curr as connect
 import rates_data
 import print_graph
-import class_graph
+import graph
 
 
 # take the logarithms of the data in rates
@@ -27,13 +27,13 @@ def earn_money(money, cycle, rates, chosen_currency):
 
 
 def get_solution():
-    interface.print_choose_curr()
+    print(interface.enter_curr)
     chosen_currency = input().upper()
 
     if chosen_currency.isdigit():
         chosen_currency = connect.numb_to_currencies[int(chosen_currency) - 1]
 
-    interface.print_enter_money()
+    print(interface.enter_amount, end=' ')
     money = int(input())
 
     count_v = len(connect.numb_to_currencies)
@@ -43,12 +43,22 @@ def get_solution():
         rates = rates_data.arr_rates[i]
         log_rates = logarithm_convertor(rates)
 
-        graph = class_graph.Graph(count_v)
-        graph.fill_graph(log_rates)
+        my_graph = graph.Graph(count_v)
+        my_graph.fill_graph(log_rates)
 
-        cycle = list(graph.negative_cycle(connect.currencies_to_numb[chosen_currency]))
+        cycle = list(my_graph.find_negative_cycle(connect.currencies_to_numb[chosen_currency]))
 
-        if graph.is_negative_cycle(connect.currencies_to_numb[chosen_currency]):
+        if my_graph.has_negative_cycle(connect.currencies_to_numb[chosen_currency]):
             print_graph.print_graf(rates, cycle, chosen_currency)
             money = earn_money(money, cycle, rates, chosen_currency)
+        print(interface.next_cycle)
+        answer = input()
+        answer = answer.upper()
+        if answer == 'NO':
+            break
+        elif answer == 'YES':
+            continue
+        else:
+            print(interface.next_cycle)
+
     interface.print_balance(money, chosen_currency)
