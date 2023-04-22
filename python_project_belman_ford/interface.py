@@ -5,5 +5,6 @@ enter_amount = "Enter an initial amount:"
 
 next_cycle = "Print next cycle?"
 
+
 def print_balance(money, chosen_currency):
     print(f"Your balance: {money} {chosen_currency}")
