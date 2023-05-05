@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('rates')
+df = pd.read_csv('/Users/leonidlevin/Downloads/Python_project/Python_project/python_project_belman_ford/data/rates')
 df = df.reset_index()
 arr_rates = []
 for index, row in df.iterrows():

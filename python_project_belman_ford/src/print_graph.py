@@ -1,8 +1,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import time
-import elements_for_printing_graph as elm
-import connection_number_curr as connect
+import src.elements_for_printing_graph as elm
+import src.connection_number_curr as connect
 
 
 def colour_the_start_of_cycle(G, node_color, edge_labels, edge_color, options, cycle, chosen_currency):

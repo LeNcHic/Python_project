@@ -1,5 +1,5 @@
 import warnings
-import solution
+import src.solution as solution
 
 
 warnings.filterwarnings("ignore")

@@ -1,10 +1,10 @@
 import math
 import random
-import interface
-import connection_number_curr as connect
-import rates_data
-import print_graph
-import graph
+import src.interface as interface
+import src.connection_number_curr as connect
+import src.rates_data as rates_data
+import src.print_graph as print_graph
+import src.graph as graph
 
 
 # take the logarithms of the data in rates
