@@ -25,7 +25,6 @@ def earn_money(money, cycle, rates, chosen_currency):
     money *= rates[start][connect.currencies_to_numb[chosen_currency]]
     return money
 
-
 def get_solution():
     print(interface.enter_curr)
     chosen_currency = input().upper()
