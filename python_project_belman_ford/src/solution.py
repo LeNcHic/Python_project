@@ -9,7 +9,7 @@ import src.graph as graph
 
 # take the logarithms of the data in rates
 def logarithm_convertor(rates):
-    log_rates = [[math.log(element) for element in row] for row in rates]
+    log_rates = [[-math.log(element) for element in row] for row in rates]
     return log_rates
 
 
